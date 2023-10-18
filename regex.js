@@ -20,7 +20,7 @@ status: Approved
 
 Regular Expression 1: Phone Number 
 - Format to match: ###-###-#### 
-- Planned usage: Will be used to parse out all phone numbers in that format in any given string. The phone numbers should be saved in an array. Make sure it captures ALL phone 
+- Planned usage: Will be used to parse out all phone numbers in that format in any given string. The phone numbers should be s@aved in an array. Make sure it captures ALL phone 
 numbers if there are more than one
 
 - Hint for regex: Is there a shortcut for digits? What quantifier allows you to specify the exact amount of times to match a character? What modifier finds all matches instead of just the first?
@@ -31,7 +31,9 @@ Expected Output:
 
 */ 
  
-let phoneReg = /write your regex here/
+let phoneReg = /\d{3}-\d{3}-\d{4}/g
+let phoneArray=sampleApp.match(phoneReg)
+console.log(phoneArray); 
 
 /* 
 
@@ -51,7 +53,9 @@ Expected Output:
 
 */ 
 
-let emailReg = /write your regex here/
+let emailReg = /\w+@[a-zA-Z]+.[a-zA-Z]+/
+let emailArray= sampleApp.match(emailReg)
+console.log(emailArray)
 
 /* 
 
@@ -67,4 +71,6 @@ Expected Output:
 
 */ 
 
-let statusReg = /write your regex here/
+let statusReg = /status/i
+let statusIndex =sampleApp/search(statusReg)
+console.log(statusIndex)
